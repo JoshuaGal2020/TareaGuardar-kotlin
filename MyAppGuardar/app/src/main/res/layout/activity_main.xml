@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="375dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="46dp"
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btMostrar" />
+
+    <EditText
+        android:id="@+id/txtLastName"
+        android:layout_width="198dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColorHint="#9C27B0"
+        app:layout_constraintStart_toEndOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="168dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:onClick="Guardar"
+        android:text="Guardar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btMostrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="375dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_Muni">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Masculino"
+            android:textColor="#9C27B0" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            android:textColor="#9C27B0" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spin_Depto"
+
+        android:layout_width="375dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spin_Muni"
+        android:layout_width="375dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_Depto"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="379dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Telefono"
+        android:inputType="phone"
+        android:textColorHint="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgGender" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="186dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColorHint="#9C27B0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="122dp"
+        android:text="INFORMACION PERSONAL"
+        android:textColor="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btMostrar"
+        android:layout_width="184dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="MostrarInfo"
+        android:text="Mostrar Inf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
